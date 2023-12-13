@@ -73,11 +73,11 @@ i derived some features from questions like no of common words, word share and s
   - <b>Euclidean distance</b>
   - <b>Minkowski distance</b>
 ### Some Features analysis and visualizations:
-- ##### word_share - We can check from below that it is overlaping a bit, but it is giving some classifiable score for disimilar questions.
+- ##### word_share - We can check from below that it is overlaping a bit, but it is giving some classifiable score for disimilar questions (fig- red:duplicate, blue:non-duplicate)
    ![Wordshare](images/6.png)
-- ##### Word Common - it is almost overlaping.
+- ##### Word Common - it is almost overlaping (fig- red:duplicate, blue:non-duplicate) 
    ![Word common](images/7.png)
-- ##### Bivariate analysis of features 'ctc_min', 'cwc_min', 'csc_min', 'token_sort_ratio'. We can observe that we can divide duplicate and non duplicate with some of these features with some patterns. 
+- ##### Bivariate analysis of features 'ctc_min', 'cwc_min', 'csc_min', 'token_sort_ratio'. We can observe that we can divide duplicate and non duplicate with some of these features with some patterns.
    ![Pair plot](images/9.png)
 - ##### Bivariate analysis of features 'Word_Mover_Dist', 'dist_cosine', 'dist_cityblock', 'dist_canberra','dist_euclidean'.This also giving some patterns to classify.
    ![Pair plot of distances](images/10.png)
