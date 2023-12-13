@@ -6,9 +6,9 @@ Over 100 million people visit Quora every month, so it's no surprise that many p
 Identify which questions asked on Quora are duplicates of questions that have already been asked.
 
 ### Snapshots of App :
-![Duplicate Question Pairs](https://github.com/shaily29-eng/quora_ques_pairs/assets/59019087/b32a507b-ec1f-4827-b6b3-d0a81e3f7859)
+![Duplicate Question Pairs](images/1.png)
 
-![Duplicate Question Pairs](https://github.com/shaily29-eng/quora_ques_pairs/assets/59019087/0422d15a-4405-420d-8ce2-920eea76acfe)
+![Duplicate Question Pairs](images/2.png)
 
 ### Real world/Business Objectives and Constraints :
    - The cost of a mis-classification can be very high.
@@ -26,16 +26,16 @@ Train.csv contains 5 columns : qid1, qid2, question1, question2, is_duplicate. T
 i derived some features from questions like no of common words, word share and some distances between questions with the help of word vectors.
 ### Some Analysis:
 - ##### Distribution of data points among output classes  
-   ![No of Datapoints per Class](https://github.com/UdiBhaskar/Quora-Question-pair-similarity/blob/master/Images/output_30_1.png "No of Datapoints per Class") 
+   ![No of Datapoints per Class](images/3.png) 
 - ##### Number of unique questions
-   ![Number of unique questions](https://github.com/UdiBhaskar/Quora-Question-pair-similarity/blob/master/Images/output_35_0.png "Number of unique questions") 
+   ![Number of unique questions](images/4.png) 
 - ##### Number of occurrences of each question
-   ![Number of occurrences of each question](https://github.com/UdiBhaskar/Quora-Question-pair-similarity/blob/master/Images/output_39_1.png "Number of occurrences of each question")
+   ![Number of occurrences of each question](images/5.png)
 - ##### There is no duplicate pairs. Have 2 Null values, which are filled with space.
 - ##### Wordcloud for similar questions
-   ![Wordcloud for similar questions](https://github.com/UdiBhaskar/Quora-Question-pair-similarity/blob/master/Images/output_71_1.png "Wordcloud for similar questions")
+   ![Wordcloud for similar questions](images/11.png)
 - ##### Wordcloud for dissimilar questions
-   ![Wordcloud for dissimilar questions](https://github.com/UdiBhaskar/Quora-Question-pair-similarity/blob/master/Images/output_73_1.png "Wordcloud for similar questions")
+   ![Wordcloud for dissimilar questions](images/12.png)
 ### Feature Extraction:
 - ##### Basic Features - Extracted some features before cleaning of data as below.
   - <b>freq_qid1</b> = Frequency of qid1's
@@ -74,13 +74,13 @@ i derived some features from questions like no of common words, word share and s
   - <b>Minkowski distance</b>
 ### Some Features analysis and visualizations:
 - ##### word_share - We can check from below that it is overlaping a bit, but it is giving some classifiable score for disimilar questions.
-   ![Wordshare](https://github.com/UdiBhaskar/Quora-Question-pair-similarity/blob/master/Images/output_51_0.png "Wordshare")
+   ![Wordshare](images/6.png")
 - ##### Word Common - it is almost overlaping.
-   ![Word common](https://github.com/UdiBhaskar/Quora-Question-pair-similarity/blob/master/Images/output_54_0.png "Word common")
+   ![Word common](images/7.png")
 - ##### Bivariate analysis of features 'ctc_min', 'cwc_min', 'csc_min', 'token_sort_ratio'. We can observe that we can divide duplicate and non duplicate with some of these features with some patterns. 
-   ![Pair plot](https://github.com/UdiBhaskar/Quora-Question-pair-similarity/blob/master/Images/output_75_0.png "Pair plot")
+   ![Pair plot](images/9.png")
 - ##### Bivariate analysis of features 'Word_Mover_Dist', 'dist_cosine', 'dist_cityblock', 'dist_canberra','dist_euclidean'.This also giving some patterns to classify.
-   ![Pair plot of distances](https://github.com/UdiBhaskar/Quora-Question-pair-similarity/blob/master/Images/output_213_0.png "Pair plot of distances")
+   ![Pair plot of distances](images/10.png")
 ### Machine Learning Models:
    - Trained a random model to check Worst case log loss and got log loss as 0.887699
    - Trained some models and also tuned hyperparameters using Random and Grid search. I didnt used total train data to train my algorithms. Because of ram availability constraint in my PC, i sampled some data and Trained my models. below are models and their logloss scores. you can check total modelling and feature extraction
